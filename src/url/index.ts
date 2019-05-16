@@ -20,9 +20,9 @@ const updateQueryParam = ({
 
         queryParams[key] = value;
 
-        const queryParamsStr = Object.keys(queryParams).map(key=>{
-            const val = queryParams[key];
-            return `${key}=${val}`;
+        const queryParamsStr = Object.keys(queryParams).map(paramKey=>{
+            const val = queryParams[paramKey];
+            return `${paramKey}=${val}`;
         }).join('&')
 
         updateQueryParamInUrl(queryParamsStr);
@@ -37,14 +37,14 @@ const updateQueryParamInUrl = (queryParam='')=>{
     }
 };
 
-const parsePairsFromString = (string='')=>{
+const parsePairsFromString = (inputStr='')=>{
 
     const output:{ [key: string]: string } = {};
 
-    const pairs = string.split('&');
+    const pairs = inputStr.split('&');
 
-    for (let i = 0; i < pairs.length; i++) {
-        const pair = pairs[i].split('=');
+    for (const item of pairs) {
+        const pair = item.split('=');
         const key:string = decodeURIComponent(pair[0]);
         const value:string = decodeURIComponent(pair[1] || '')
 

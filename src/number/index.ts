@@ -1,4 +1,4 @@
-const abbreviateNumber = function(num:number, fixed?:number) {
+const abbreviateNumber = (num:number, fixed?:number)=>{
     if (num === null) { return null; } // terminate early
     if (num === 0) { return '0'; } // terminate early
     fixed = (!fixed || fixed < 0) ? 0 : fixed; // number of decimal places to show

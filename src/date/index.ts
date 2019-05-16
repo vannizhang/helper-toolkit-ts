@@ -1,4 +1,4 @@
-const addMinutesToCurrentTime = function(numOfMinToAdd:number){
+const addMinutesToCurrentTime = (numOfMinToAdd:number)=>{
     return new Date().getTime() + (numOfMinToAdd * 60 * 1000);
 };
 
