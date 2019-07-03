@@ -3,14 +3,14 @@ A toolkit with helper functions needed for repetitive, tedious tasks.
 
 ## Installation:
 ```
-npm i helper-toolkit --save
+npm i helper-toolkit-ts --save
 ```
 
 ## Usage:
 
 ### URL functions:
 ```
-import { urlFns } from 'helper-toolkit'
+import { urlFns } from 'helper-toolkit-ts'
 ```
 
 - `urlFns.parseQuery()` split and parse window.location.query
@@ -20,7 +20,7 @@ import { urlFns } from 'helper-toolkit'
 
 ### String functions:
 ```
-import { stringFns } from 'helper-toolkit'
+import { stringFns } from 'helper-toolkit-ts'
 ```
 
 - `stringFns.capitalizeFirstLetter('hello word')` capitalize first letter of each word in a string
@@ -28,7 +28,7 @@ import { stringFns } from 'helper-toolkit'
 
 ### geometry functions:
 ```
-import { geometryFns } from 'helper-toolkit'
+import { geometryFns } from 'helper-toolkit-ts'
 ```
 
 - `geometryFns.long2tile(-90.5, 12)` get tile number from longitude and zoom number
