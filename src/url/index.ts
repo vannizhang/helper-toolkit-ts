@@ -52,4 +52,38 @@ const parsePairsFromString = (inputStr = '') => {
   return output;
 };
 
-export { parseQuery, parseHash, updateQueryParamInUrl, updateQueryParam };
+interface IUpdateKeyValuePairInQueryStringParams {
+  queryString:string,
+  key:string,
+  value:string | boolean | number
+}
+
+const updateKeyValuePairInQueryString = ({ queryString, key, value }:IUpdateKeyValuePairInQueryStringParams): string =>{
+
+  if(queryString && key){
+    const queryParams = parsePairsFromString(queryString);
+
+    queryParams[key] = value.toString();
+
+    const queryParamsStr = stringifyQueryParams(queryParams);
+
+    return queryParamsStr
+  }
+
+  return '';
+}
+
+const stringifyQueryParams = (queryParams: any): string =>{
+
+  const queryParamsStr = Object.keys(queryParams)
+    .map((paramKey: any) => {
+      const val:any = queryParams[paramKey];
+      return `${paramKey}=${val}`;
+    })
+    .join('&');
+
+  return queryParamsStr;
+}
+
+
+export { parseQuery, parseHash, updateQueryParamInUrl, updateQueryParam, updateKeyValuePairInQueryString };
