@@ -7,5 +7,5 @@ test('string functions', () => {
 
   expect(stringFns.stripHtmlTag('<p>foobar</p>')).toBe('foobar');
 
-  expect(stringFns.trunc('not very long', 11, true)).toBe('not very&hellip;');
+  expect(stringFns.trunc('not very long', 11, true)).toBe('not very...');
 });

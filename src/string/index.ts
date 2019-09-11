@@ -31,7 +31,7 @@ const trunc = (text = '', n = 0, useWordBoundary = false) => {
 
   const subString = text.substr(0, n - 1);
 
-  return (useWordBoundary ? subString.substr(0, subString.lastIndexOf(' ')) : subString) + '&hellip;';
+  return (useWordBoundary ? subString.substr(0, subString.lastIndexOf(' ')) : subString) + '...';
 };
 
 export { capitalizeFirstLetter, hasHtmlTag, stripHtmlTag, trunc };
