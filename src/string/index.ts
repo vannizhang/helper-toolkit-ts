@@ -24,4 +24,14 @@ const stripHtmlTag = (text: string) => {
   return outputText;
 };
 
-export { capitalizeFirstLetter, hasHtmlTag, stripHtmlTag };
+const trunc =  (text='', n=0, useWordBoundary=false )=>{
+  if(text.length <= n) { 
+    return text;
+  }
+
+  const subString = text.substr(0, n-1);
+
+  return ( useWordBoundary ? subString.substr(0, subString.lastIndexOf(' '))  : subString) + "&hellip;";
+}
+
+export { capitalizeFirstLetter, hasHtmlTag, stripHtmlTag, trunc };

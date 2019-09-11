@@ -29,6 +29,8 @@ import { stringFns } from 'helper-toolkit-ts'
 
 - `stringFns.stripHtmlTag('<p>foobar</p>')` remove html tag from string
 
+- `stringFns.trunc('not very long', 11, true)` truncate string if too long
+
 ### date functions:
 
 ```
