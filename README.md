@@ -25,6 +25,27 @@ import { stringFns } from 'helper-toolkit-ts'
 
 - `stringFns.capitalizeFirstLetter('hello word')` capitalize first letter of each word in a string
 
+- `stringFns.hasHtmlTag('<p>foobar</p>')` does input string contain html tag
+
+- `stringFns.stripHtmlTag('<p>foobar</p>')` remove html tag from string
+
+### date functions:
+
+```
+import { dateFns } from 'helper-toolkit-ts'
+```
+
+- `dateFns.getMonthName(monthIndex:number, isShort:boolean)`
+
+### misc functions:
+
+```
+import { miscFns } from 'helper-toolkit-ts'
+```
+
+- `miscFns.generateUID()` get a really unique id
+
+- `miscFns.isMobileDevice()` if is using mobile device
 
 ### geometry functions:
 ```
