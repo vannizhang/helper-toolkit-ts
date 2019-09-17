@@ -31,7 +31,7 @@ const formatTimestamp = (timestamp = 0) => {
     return '';
   }
 
-  timestamp = +timestamp * 1000;
+  timestamp = +timestamp;
 
   const date = new Date(timestamp);
 
