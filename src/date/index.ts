@@ -26,4 +26,25 @@ const getMonthName = (monthIndex = -1, isShort = false) => {
   return isShort ? shortNames[monthIndex] : names[monthIndex];
 };
 
-export { addMinutesToCurrentTime, getMonthName };
+const formatTimestamp = (timestamp=0)=>{
+
+  if(!timestamp){
+    return '';
+  }
+
+  timestamp = +timestamp * 1000;
+
+  const date = new Date(timestamp);
+
+  const year = date.getFullYear();
+  const monthIndex = date.getMonth();
+  const month = monthIndex + 1;
+  const day = date.getDate();
+  const formatedMonth = month < 10 ? `0${month}` : month.toString();
+  const formatedDay = day < 10 ? `0${day}` : day.toString();
+
+  return `${year}/${formatedMonth}/${formatedDay}`;
+
+}
+
+export { addMinutesToCurrentTime, getMonthName, formatTimestamp };
