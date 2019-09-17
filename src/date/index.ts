@@ -26,9 +26,8 @@ const getMonthName = (monthIndex = -1, isShort = false) => {
   return isShort ? shortNames[monthIndex] : names[monthIndex];
 };
 
-const formatTimestamp = (timestamp=0)=>{
-
-  if(!timestamp){
+const formatTimestamp = (timestamp = 0) => {
+  if (!timestamp) {
     return '';
   }
 
@@ -44,7 +43,6 @@ const formatTimestamp = (timestamp=0)=>{
   const formatedDay = day < 10 ? `0${day}` : day.toString();
 
   return `${year}/${formatedMonth}/${formatedDay}`;
-
-}
+};
 
 export { addMinutesToCurrentTime, getMonthName, formatTimestamp };
