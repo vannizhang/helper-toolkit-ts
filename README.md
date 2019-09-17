@@ -39,6 +39,8 @@ import { dateFns } from 'helper-toolkit-ts'
 
 - `dateFns.getMonthName(monthIndex:number, isShort:boolean)`
 
+- `dateFns.formatTimestamp(1568742213)` format unix timestamp (e.g.'2019/09/17')
+
 ### misc functions:
 
 ```
