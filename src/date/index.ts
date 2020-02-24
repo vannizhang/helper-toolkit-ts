@@ -45,4 +45,13 @@ const formatTimestamp = (timestamp = 0) => {
   return `${year}/${formatedMonth}/${formatedDay}`;
 };
 
-export { addMinutesToCurrentTime, getMonthName, formatTimestamp };
+// Round a Date() down to the nearest n minutes (e.g. 10:57AM => 10:55 AM)
+const getRoundedDate = (numOfMin=0)=>{
+  numOfMin = numOfMin || 5;
+  const coeff = 1000 * 60 * numOfMin;
+  const date = new Date();  //or use any other date
+  const rounded = new Date(Math.floor(date.getTime() / coeff) * coeff).getTime();
+  return rounded / 1000;
+}
+
+export { addMinutesToCurrentTime, getMonthName, formatTimestamp, getRoundedDate };
