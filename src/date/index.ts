@@ -49,7 +49,8 @@ const formatTimestamp = (timestamp = 0) => {
 const getRoundedDate = (numOfMin=0)=>{
   numOfMin = numOfMin || 5;
   const coeff = 1000 * 60 * numOfMin;
-  const date = new Date();  //or use any other date
+  // or use any other date
+  const date = new Date();  
   const rounded = new Date(Math.floor(date.getTime() / coeff) * coeff).getTime();
   return rounded / 1000;
 }
