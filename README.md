@@ -8,48 +8,34 @@ npm i helper-toolkit-ts --save
 
 ## Usage:
 
-### URL functions:
+### [URL functions](./src/url/README.md):
 ```
 import { urlFns } from 'helper-toolkit-ts'
 ```
 
-- `urlFns.parseQuery()` split and parse window.location.query
+### [Number functions](./src/number/README.md):
+```
+import { numberFns } from 'helper-toolkit-ts'
+```
 
-- `urlFns.parseHash()` split and parse window.location.hash
-
-
-### String functions:
+### [String functions](./src/string/README.md):
 ```
 import { stringFns } from 'helper-toolkit-ts'
 ```
 
-- `stringFns.capitalizeFirstLetter('hello word')` capitalize first letter of each word in a string
 
-- `stringFns.hasHtmlTag('<p>foobar</p>')` does input string contain html tag
-
-- `stringFns.stripHtmlTag('<p>foobar</p>')` remove html tag from string
-
-- `stringFns.trunc('not very long', 11, true)` truncate string if too long
-
-### date functions:
+### [date functions](./src/date/README.md):
 
 ```
 import { dateFns } from 'helper-toolkit-ts'
 ```
 
-- `dateFns.getMonthName(monthIndex:number, isShort:boolean)`
 
-- `dateFns.formatTimestamp(1568742213)` format unix timestamp (e.g.'2019/09/17')
-
-### misc functions:
+### [misc functions](./src/misc/README.md):
 
 ```
 import { miscFns } from 'helper-toolkit-ts'
 ```
-
-- `miscFns.generateUID()` get a really unique id
-
-- `miscFns.isMobileDevice()` if is using mobile device
 
 ### geometry functions:
 ```
