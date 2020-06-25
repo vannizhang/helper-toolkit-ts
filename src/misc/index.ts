@@ -22,10 +22,10 @@ const isMobileDevice = () => {
   return isMobile;
 };
 
-const isValidColor = (colorStr:string)=>{
+const isValidColor = (colorStr: string) => {
   const colorPattern = colorStr.match(/(?:#|0x)(?:[a-f0-9]{3}|[a-f0-9]{6})\b|(?:rgb|hsl)a?\([^\)]*\)/i);
   const isValid = colorPattern && colorPattern.length ? true : false;
-  return isValid
+  return isValid;
 };
 
 export { generateUID, isMobileDevice, isValidColor };
