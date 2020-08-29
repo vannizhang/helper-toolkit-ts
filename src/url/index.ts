@@ -87,4 +87,22 @@ const stringifyQueryParams = (queryParams: any): string => {
   return queryParamsStr;
 };
 
-export { parseQuery, parseHash, updateQueryParamInUrl, updateQueryParam, updateKeyValuePairInQueryString };
+// update a hash param by providing key and value
+const updateHashParam = ({ key = '', value = '' } = {}) => {
+  if (key) {
+      const hashParams = parseHash();
+
+      hashParams[key] = value;
+
+      const queryParamsStr = Object.keys(hashParams)
+      .map(paramKey => {
+          const val = hashParams[paramKey];
+          return `${paramKey}=${val}`;
+      })
+      .join('&');
+
+      window.location.hash = queryParamsStr;
+  }
+};
+
+export { parseQuery, parseHash, updateQueryParamInUrl, updateQueryParam, updateKeyValuePairInQueryString, updateHashParam };
