@@ -18,8 +18,9 @@ const updateQueryParam = ({ key = '', value = '' } = {}) => {
     const queryParamsStr = Object.keys(queryParams)
       .map(paramKey => {
         const val = queryParams[paramKey];
-        return `${paramKey}=${val}`;
+        return val ? `${paramKey}=${val}` : '';
       })
+      .filter(d=>d)
       .join('&');
 
     updateQueryParamInUrl(queryParamsStr);
@@ -97,8 +98,9 @@ const updateHashParam = ({ key = '', value = '' } = {}) => {
     const queryParamsStr = Object.keys(hashParams)
       .map(paramKey => {
         const val = hashParams[paramKey];
-        return `${paramKey}=${val}`;
+        return val ? `${paramKey}=${val}` : '';
       })
+      .filter(d=>d)
       .join('&');
 
     window.location.hash = queryParamsStr;
