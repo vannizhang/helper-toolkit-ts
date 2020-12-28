@@ -20,7 +20,7 @@ const updateQueryParam = ({ key = '', value = '' } = {}) => {
         const val = queryParams[paramKey];
         return val ? `${paramKey}=${val}` : '';
       })
-      .filter(d=>d)
+      .filter(d => d)
       .join('&');
 
     updateQueryParamInUrl(queryParamsStr);
@@ -100,7 +100,7 @@ const updateHashParam = ({ key = '', value = '' } = {}) => {
         const val = hashParams[paramKey];
         return val ? `${paramKey}=${val}` : '';
       })
-      .filter(d=>d)
+      .filter(d => d)
       .join('&');
 
     window.location.hash = queryParamsStr;
