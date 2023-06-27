@@ -1,3 +1,8 @@
+/**
+ * Capitalizes the first letter of each word in a given text.
+ * @param {string} text - The text to be capitalized.
+ * @returns {string} The text with the first letter of each word capitalized.
+ */
 const capitalizeFirstLetter = (text: string) => {
   return (text = text
     .toLowerCase()
@@ -8,30 +13,21 @@ const capitalizeFirstLetter = (text: string) => {
     .join(' '));
 };
 
-const hasHtmlTag = (text: string) => {
-  return /<[a-z][\s\S]*>/i.test(text);
-};
-
-const stripHtmlTag = (text: string) => {
-  if (!hasHtmlTag(text)) {
-    return text;
-  }
-
-  const div = document.createElement('div');
-  div.innerHTML = text;
-
-  const outputText = div.textContent || div.innerText || '';
-  return outputText;
-};
-
+/**
+ * Truncates a given text to a specified length and appends ellipsis (...) at the end if needed.
+ * @param {string} text - The text to be truncated.
+ * @param {number} [n=0] - The maximum length of the truncated text. Defaults to 0 if not provided.
+ * @param {boolean} [useWordBoundary=false] - Determines whether to truncate at a word boundary. Defaults to false if not provided.
+ * @returns {string} The truncated text with ellipsis (...) if applicable.
+ */
 const trunc = (text = '', n = 0, useWordBoundary = false) => {
   if (text.length <= n) {
     return text;
   }
 
-  const subString = text.substr(0, n - 1);
+  const subString = text.slice(0, n - 1);
 
-  return (useWordBoundary ? subString.substr(0, subString.lastIndexOf(' ')) : subString) + '...';
+  return (useWordBoundary ? subString.slice(0, subString.lastIndexOf(' ')) : subString) + '...';
 };
 
-export { capitalizeFirstLetter, hasHtmlTag, stripHtmlTag, trunc };
+export { capitalizeFirstLetter, trunc };

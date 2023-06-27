@@ -1,8 +1,29 @@
-import * as dateFns from './date';
-import * as geometryFns from './geometry';
-import * as miscFns from './misc';
-import * as numberFns from './number';
-import * as stringFns from './string';
-import * as urlFns from './url';
+import { getRoundedTimestamp } from './date';
 
-export { dateFns, geometryFns, miscFns, numberFns, stringFns, urlFns };
+import { lat2tile, long2tile, tile2Long, tile2lat } from './geometry';
+
+import { abbreviateNumber, numberWithCommas } from './number';
+
+import { capitalizeFirstLetter, trunc } from './string';
+
+import { generateUID, isMobileDevice, isValidColor } from './misc';
+
+export {
+  // re-export date module
+  getRoundedTimestamp,
+  // re-export geometry module
+  lat2tile,
+  long2tile,
+  tile2Long,
+  tile2lat,
+  // re-export number module
+  abbreviateNumber,
+  numberWithCommas,
+  // re-export string moudle
+  capitalizeFirstLetter,
+  trunc,
+  // re-export misc module
+  generateUID,
+  isMobileDevice,
+  isValidColor,
+};

@@ -1,14 +1,13 @@
-# Number functions
-```
-import { numberFns } from 'helper-toolkit-ts'
-```
+# Helper functions for Number
 
-## abbreviateNumber
+## `abbreviateNumber`
+Abbreviates a number by converting it into a shorter format with an appropriate suffix.
 
-### Syntax:
+### Usage:
 
 ```
-numberFns.abbreviateNumber(num, fixed)
+import { abbreviateNumber } from 'helper-toolkit-ts'
+abbreviateNumber(1000) // '1k'
 ```
 
 ### Arguments: 
@@ -26,12 +25,14 @@ numberFns.abbreviateNumber(num, fixed)
 
 <br/>
 
-## numberWithCommas
+## `numberWithCommas`
+Converts a number to a string representation with commas for better readability.
 
-### Syntax:
+### Usage:
 
 ```
-numberFns.numberWithCommas(num)
+import { numberWithCommas } from 'helper-toolkit-ts'
+numberWithCommas(1000) // '1,000'
 ```
 
 ### Arguments: 

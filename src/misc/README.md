@@ -1,14 +1,14 @@
-# miscellaneous functions
-```
-import { miscFns } from 'helper-toolkit-ts'
-```
+# Miscellaneous Helper Functions
 
-## generateUID
+## `generateUID`
+Generates a unique identifier (UUID) using the version 4 format.
 
-### Syntax:
+### Usage:
 
 ```
-miscFns.generateUID()
+import { generateUID } from 'helper-toolkit-ts'
+
+generateUID(); // 
 ```
 
 ### Arguments: 
@@ -25,12 +25,14 @@ miscFns.generateUID()
 
 <br/>
 
-## isMobileDevice
+## `isMobileDevice`
+Determines whether the current device is a mobile device.
 
-### Syntax:
+### Usage:
 
 ```
-miscFns.isMobileDevice()
+import { isMobileDevice } from 'helper-toolkit-ts'
+isMobileDevice()
 ```
 
 ### Arguments: 
@@ -48,11 +50,13 @@ miscFns.isMobileDevice()
 <br/>
 
 ## isValidColor
+Checks if the provided color string is valid.
 
-### Syntax:
+### Usage:
 
 ```
-miscFns.isValidColor()
+import { isValidColor } from 'helper-toolkit-ts'
+isValidColor()
 ```
 
 ### Arguments: 

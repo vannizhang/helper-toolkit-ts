@@ -1,12 +1,17 @@
 {
     "compilerOptions": {
-        "lib": ["es5", "es6", "dom"],
-        "target": "es5",
-        "module": "commonjs",
         "declaration": true,
-        "outDir": "./dist",
-        "strict": true
+        "outDir": "dist",
+        "module": "commonjs",
+        // Modern browsers support all ES6 features, so ES6 is a good choice. 
+        "target": "es6",
+        "esModuleInterop": true,
+        "sourceMap": true
     },
-    "include": ["src"],
-    "exclude": ["node_modules", "**/__tests__/*"]
-  }
+    "include": ["src/**/*"],
+    "exclude": [
+        "node_modules", 
+        "**/*.spec.ts",
+        "**/*.test.ts"
+    ]
+}

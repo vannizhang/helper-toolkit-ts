@@ -1,4 +1,7 @@
 src
 tsconfig.json
-tslint.json
-.prettierrc
+jest.config.js
+.eslintrc.js
+.prettierrc.js
+.eslintcache
+.husky/

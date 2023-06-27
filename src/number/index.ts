@@ -1,3 +1,9 @@
+/**
+ * Abbreviates a number by converting it into a shorter format with an appropriate suffix.
+ * @param {number} num - The number to be abbreviated.
+ * @param {number} [fixed] - The number of decimal places to show. Defaults to 0 if not provided.
+ * @returns {string} The abbreviated number as a string with the appropriate suffix.
+ */
 const abbreviateNumber = (num: number, fixed?: number) => {
   if (num === null) {
     return null;
@@ -15,6 +21,11 @@ const abbreviateNumber = (num: number, fixed?: number) => {
   return e;
 };
 
+/**
+ * Converts a number to a string representation with commas for better readability.
+ * @param {number} x - The number to be formatted.
+ * @returns {string} The formatted string representation of the number with commas.
+ */
 const numberWithCommas = (x: number) => {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 };

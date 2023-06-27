@@ -1,14 +1,13 @@
-# String functions
-```
-import { stringFns } from 'helper-toolkit-ts'
-```
+# Helper functions for Strings
 
 ## capitalizeFirstLetter
+Capitalizes the first letter of each word in a given text.
 
-### Syntax:
+### Usage:
 
-```
-stringFns.capitalizeFirstLetter(text)
+```js
+import { capitalizeFirstLetter } from 'helper-toolkit-ts'
+capitalizeFirstLetter('hello world') // 'Hello World'
 ```
 
 ### Arguments: 
@@ -25,56 +24,14 @@ stringFns.capitalizeFirstLetter(text)
 
 <br/>
 
-## hasHtmlTag
-
-### Syntax:
-
-```
-stringFns.hasHtmlTag(text)
-```
-
-### Arguments: 
-
-|Name | Type | Description |
-|:--  |:--   | :--         |
-| text | string | input text |
-
-### Returns:
-
-| Type | Description |
-|:--   | :--         |
-| boolean | if input string contains HTML tag |
-
-<br/>
-
-## stripHtmlTag
-
-### Syntax:
-
-```
-stringFns.stripHtmlTag(text)
-```
-
-### Arguments: 
-
-|Name | Type | Description |
-|:--  |:--   | :--         |
-| text | string | input text |
-
-### Returns:
-
-| Type | Description |
-|:--   | :--         |
-| string | text with HTML tags removed |
-
-<br/>
-
 ## trunc
+Truncates a given text to a specified length and appends ellipsis (...) at the end if needed.
 
 ### Syntax:
 
-```
-stringFns.trunc(text, n, useWordBoundary)
+```js
+import { trunc } from 'helper-toolkit-ts'
+trunc('long text to trucated', 10, true) // 'long text...'
 ```
 
 ### Arguments: 
