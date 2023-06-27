@@ -200,30 +200,3 @@ const isMobile = isMobileDevice();
 | boolean | if is using mobile device |
 
 <br/>
-
-## `isValidColor`
-Checks if the provided color string is valid.
-
-### Usage:
-
-```js
-import { isValidColor } from 'helper-toolkit-ts'
-
-const color = '#ff0000';
-const isValid = isValidColor(color);
-console.log(isValid); // Output: true
-```
-
-### Arguments: 
-
-|Name | Type | Description |
-|:--  |:--   | :--         |
-| colorStr | string | input color string (e.g. '#000', '#000000', 'rgb(0,0,0)') |
-
-### Returns:
-
-| Type | Description |
-|:--   | :--         |
-| boolean | if input string is valid color |
-
-<br/>

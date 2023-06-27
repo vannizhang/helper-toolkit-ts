@@ -48,27 +48,3 @@ isMobileDevice()
 | boolean | if is using mobile device |
 
 <br/>
-
-## isValidColor
-Checks if the provided color string is valid.
-
-### Usage:
-
-```
-import { isValidColor } from 'helper-toolkit-ts'
-isValidColor()
-```
-
-### Arguments: 
-
-|Name | Type | Description |
-|:--  |:--   | :--         |
-| colorStr | string | input color string (e.g. '#000', '#000000', 'rgb(0,0,0)') |
-
-### Returns:
-
-| Type | Description |
-|:--   | :--         |
-| boolean | if input string is valid color |
-
-<br/>

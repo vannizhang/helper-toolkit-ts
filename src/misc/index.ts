@@ -2,7 +2,7 @@
  * Generates a unique identifier (UUID) using the version 4 format.
  * @returns {string} A randomly generated UUID in the format 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.
  */
-const generateUID = () => {
+export const generateUID = () => {
   return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
     const r = (Math.random() * 16) | 0;
     const v = c === 'x' ? r : (r & 0x3) | 0x8;
@@ -14,7 +14,7 @@ const generateUID = () => {
  * Determines whether the current device is a mobile device.
  * @returns {boolean} Returns true if the current device is a mobile device, otherwise returns false.
  */
-const isMobileDevice = () => {
+export const isMobileDevice = () => {
   let isMobile = false;
   // device detection
   if (
@@ -29,16 +29,3 @@ const isMobileDevice = () => {
   }
   return isMobile;
 };
-
-/**
- * Checks if the provided color string is valid.
- * @param {string} colorStr - The color string to be validated.
- * @returns {boolean} Returns true if the color string is valid, otherwise returns false.
- */
-const isValidColor = (colorStr: string) => {
-  const colorPattern = colorStr.match(/(?:#|0x)(?:[a-f0-9]{3}|[a-f0-9]{6})\b|(?:rgb|hsl)a?\([^)]*)/i);
-  const isValid = colorPattern && colorPattern.length ? true : false;
-  return isValid;
-};
-
-export { generateUID, isMobileDevice, isValidColor };

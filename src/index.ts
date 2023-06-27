@@ -6,7 +6,7 @@ import { abbreviateNumber, numberWithCommas } from './number';
 
 import { capitalizeFirstLetter, trunc } from './string';
 
-import { generateUID, isMobileDevice, isValidColor } from './misc';
+import { generateUID, isMobileDevice } from './misc';
 
 export {
   // re-export date module
@@ -25,5 +25,4 @@ export {
   // re-export misc module
   generateUID,
   isMobileDevice,
-  isValidColor,
 };
